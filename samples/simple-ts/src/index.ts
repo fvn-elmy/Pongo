@@ -1,7 +1,9 @@
 import { endAllPools, pongoClient } from '@event-driven-io/pongo';
-import { v4 as uuid } from 'uuid';
+import { randomUUID } from 'crypto';
 
 type User = { name: string; age: number };
+
+const uuid = randomUUID;
 
 const connectionString =
   'postgresql://postgres:postgres@localhost:5432/postgres';
